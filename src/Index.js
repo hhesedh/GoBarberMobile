@@ -4,9 +4,8 @@ import { Provider } from 'react-redux';
 import { StatusBar } from 'react-native';
 import './config/ReactotronConfig';
 
-import Routes from './routes';
-
 import { store, persistor } from './store';
+import SrcApp from './SrcApp';
 
 export default function Index() {
   return (
@@ -14,7 +13,7 @@ export default function Index() {
       <PersistGate persistor={persistor}>
         <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
       </PersistGate>
-      <Routes />
+      <SrcApp />
     </Provider>
   );
 }
