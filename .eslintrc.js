@@ -34,6 +34,8 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off',
   },
+  ignorePatterns: ['node_modules/'],
+
   settings: {
     'import/resolver': {
       'babel-plugin-root-import': {
