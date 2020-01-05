@@ -1,4 +1,4 @@
-import Reactotron, { asyncStorage } from 'reactotron-react-native';
+import Reactotron from 'reactotron-react-native';
 import { reactotronRedux } from 'reactotron-redux';
 import reactotronSaga from 'reactotron-redux-saga';
 import { AsyncStorage } from 'react-native';
@@ -10,7 +10,6 @@ if (__DEV__) {
     .useReactNative()
     .use(reactotronRedux())
     .use(reactotronSaga())
-    .use(asyncStorage())
     .connect();
 
   tron.clear();
