@@ -14,7 +14,6 @@ export function* signIn({ payload }) {
     });
 
     const { token, user } = response.data;
-
     if (user.provider) {
       Alert.alert(
         'Erro no login',
@@ -44,7 +43,6 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
     // history.push('/');
     Alert.alert('Sucesso!', 'Perfil cadastrado com Sucesso');
