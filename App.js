@@ -1,6 +1,6 @@
 import React from 'react';
-import Test from '~/Test';
+import Index from '~/Index';
 
 export default function App() {
-  return <Test />;
+  return <Index />;
 }
