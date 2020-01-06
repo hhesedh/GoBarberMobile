@@ -2,14 +2,14 @@ import React, { useMemo } from 'react';
 import { parseISO, formatRelative } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import { TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 
 import { Container, Left, Avatar, Info, Name, Time } from './styles';
 
-export default function({ data, onCancel }) {
-  console.log(data);
-
+export default function Appointment({ data, onCancel }) {
   const dateParsed = useMemo(() => {
     return formatRelative(parseISO(data.date), new Date(), {
       locale: pt,
@@ -40,3 +40,19 @@ export default function({ data, onCancel }) {
     </Container>
   );
 }
+
+Appointment.propTypes = {
+  onCancel: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    past: PropTypes.bool.isRequired,
+    cancelable: PropTypes.bool.isRequired,
+    canceled_at: PropTypes.string,
+    provider: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+    }).isRequired,
+  }).isRequired,
+};

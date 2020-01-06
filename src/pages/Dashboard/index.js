@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { MaterialIcons as Icon } from '@expo/vector-icons';
+import PropTypes from 'prop-types';
 import api from '~/services/api';
 import { Container, Title, List } from './styles';
 
@@ -49,9 +50,15 @@ export default function Dashboard() {
   );
 }
 
+const tabIcon = ({ tintColor }) => (
+  <Icon name="event" size={20} color={tintColor} />
+);
+
+tabIcon.propTypes = {
+  tintColor: PropTypes.string.isRequired,
+};
+
 Dashboard.navigationOptions = {
   tabBarLabel: 'Agendamentos',
-  tabBarIcon: ({ tintColor }) => (
-    <Icon name="event" size={20} color={tintColor} />
-  ),
+  tabBarIcon: tabIcon,
 };
