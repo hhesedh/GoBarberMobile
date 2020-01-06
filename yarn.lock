@@ -2136,6 +2136,11 @@ damerau-levenshtein@^1.0.4:
   resolved "https://registry.npm.taobao.org/damerau-levenshtein/download/damerau-levenshtein-1.0.5.tgz#780cf7144eb2e8dbd1c3bb83ae31100ccc31a414"
   integrity sha1-eAz3FE6y6NvRw7uDrjEQDMwxpBQ=
 
+date-fns@^2.8.1:
+  version "2.8.1"
+  resolved "https://registry.npm.taobao.org/date-fns/download/date-fns-2.8.1.tgz#2109362ccb6c87c3ca011e9e31f702bc09e4123b"
+  integrity sha1-IQk2LMtsh8PKAR6eMfcCvAnkEjs=
+
 dayjs@^1.8.15:
   version "1.8.18"
   resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.8.18.tgz#c9b3fcd5a8eca96ed20a907f4491516d6eda15c9"
