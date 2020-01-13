@@ -24,6 +24,8 @@ function Dashboard({ isFocused }) {
   }, [isFocused]);
 
   async function handleCancel(id) {
+    await api.delete(`appointments/${id}`);
+    /*
     const response = await api.delete(`appointments/${id}`);
 
     setAppointments(
@@ -35,7 +37,9 @@ function Dashboard({ isFocused }) {
             }
           : appointment
       )
-    );
+    ); */
+
+    loadAppointments();
   }
   return (
     <Background>
