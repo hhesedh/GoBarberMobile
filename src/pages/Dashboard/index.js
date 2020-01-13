@@ -65,6 +65,10 @@ tabIcon.propTypes = {
   tintColor: PropTypes.string.isRequired,
 };
 
+Dashboard.propTypes = {
+  isFocused: PropTypes.bool.isRequired,
+};
+
 Dashboard.navigationOptions = {
   tabBarLabel: 'Agendamentos',
   tabBarIcon: tabIcon,

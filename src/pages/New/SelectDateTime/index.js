@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
@@ -68,3 +70,10 @@ SelectDateTime.navigationOptions = ({ navigation }) => ({
     </TouchableOpacity>
   ),
 });
+
+SelectDateTime.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+    getParam: PropTypes.func.isRequired,
+  }).isRequired,
+};

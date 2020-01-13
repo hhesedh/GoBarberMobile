@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import Background from '~/components/Background';
-
 import api from '~/services/api';
 
 import { Container, ProvidersList, Provider, Avatar, Name } from './styles';
@@ -59,3 +60,9 @@ SelectProvider.navigationOptions = ({ navigation }) => ({
     </TouchableOpacity>
   ),
 });
+
+SelectProvider.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};

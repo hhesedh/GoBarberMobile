@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import PropType from 'prop-types';
 import { DatePickerIOS } from 'react-native';
 import { format } from 'date-fns';
 import pt from 'date-fns/locale/pt';
@@ -6,7 +7,7 @@ import pt from 'date-fns/locale/pt';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 
-import { Container, DateButton, DateText } from './styles';
+import { Container, DateButton, DateText, Picker } from './styles';
 
 export default function DateInput({ date, onChange }) {
   const [opened, setOpened] = useState(false);
@@ -35,3 +36,8 @@ export default function DateInput({ date, onChange }) {
     </Container>
   );
 }
+
+DateInput.propTypes = {
+  date: PropType.bool.isRequired,
+  onChange: PropType.func.isRequired,
+};
